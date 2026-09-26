@@ -1,0 +1,3 @@
+# DRAGONS SMP — ignora config local con claves (usa .example como plantilla)
+supabase-config.js
+.env

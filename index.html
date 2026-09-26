@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DRAGONS SMP. La nueva generación del survival comienza aquí.">
+  <meta name="theme-color" content="#050507">
+  <title>DRAGONS SMP | Minecraft Java &amp; Bedrock</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="bg-scene" aria-hidden="true">
+    <span class="bg-base"></span>
+    <span class="bg-grid"></span>
+    <span class="bg-vignette"></span>
+  </div>
+  <div id="particles-layer" aria-hidden="true"></div>
+  <div id="fx-spotlight" aria-hidden="true"></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="fx-cursor-dot" aria-hidden="true"></div>
+  <div id="fx-cursor-halo" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio" aria-label="DRAGONS SMP, inicio">
+        <img src="assets/logo.png" alt="DRAGONS SMP" class="brand-mark">
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a class="nav-link is-active" href="#inicio">Inicio</a>
+        <a class="nav-link" href="#servidor">Servidor</a>
+        <a class="nav-link" href="#tienda">Tienda</a>
+        <a class="nav-link" href="#reglas">Reglas</a>
+        <a class="nav-link" href="#noticias">Noticias</a>
+        <a class="nav-link nav-link--discord" href="#discord">Discord <span>↗</span></a>
+      </nav>
+      <div class="nav-auth" id="nav-auth">
+        <button class="auth-login-btn" id="auth-login-btn" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.54 4.22A16.2 16.2 0 0 0 15.5 3l-.5 1.02a14.2 14.2 0 0 0-3-.33c-1.02 0-2.02.11-3 .33L8.5 3a16.3 16.3 0 0 0-4.04 1.22C1.9 8.04 1.2 11.8 1.55 15.5a16.4 16.4 0 0 0 4.96 2.5l1.2-1.63c-.66-.24-1.29-.55-1.9-.9l.47-.36c3.66 1.72 7.63 1.72 11.25 0l.48.36c-.61.36-1.25.66-1.91.9l1.2 1.63a16.4 16.4 0 0 0 4.96-2.5c.41-4.3-.7-8.03-2.72-11.28ZM8.3 14.34c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2c1.13 0 2.02.99 2 2.2 0 1.21-.88 2.2-2 2.2Zm7.4 0c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2c1.13 0 2.02.99 2 2.2 0 1.21-.88 2.2-2 2.2Z"/></svg>
+          <span data-login-label>INICIAR SESIÓN</span>
+        </button>
+        <div class="auth-user" id="auth-user" hidden>
+          <button class="auth-user-btn" id="auth-user-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Abrir menú de usuario">
+            <img class="auth-avatar" id="auth-avatar" src="assets/avatar-placeholder.svg" alt="Avatar de Discord">
+            <span class="auth-username" id="auth-username">Cargando…</span>
+            <span class="auth-caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="auth-dropdown" id="auth-dropdown" role="menu" aria-label="Menú de usuario">
+            <div class="auth-dropdown-head">
+              <img class="auth-dropdown-avatar" id="auth-dropdown-avatar" src="assets/avatar-placeholder.svg" alt="Avatar de Discord">
+              <div class="auth-dropdown-identity">
+                <strong id="auth-dropdown-name">Dragón</strong>
+                <span id="auth-dropdown-username">@dragon</span>
+                <small class="auth-dropdown-status">🟢 Discord conectado</small>
+              </div>
+            </div>
+            <div class="auth-dropdown-section" role="group" aria-label="Cuenta">
+              <button type="button" role="menuitem" data-action="profile"><span class="auth-dropdown-icon" aria-hidden="true">◈</span> Mi perfil</button>
+              <button type="button" role="menuitem" data-action="account"><span class="auth-dropdown-icon" aria-hidden="true">◎</span> Mi cuenta</button>
+              <button type="button" role="menuitem" data-action="stats"><span class="auth-dropdown-icon" aria-hidden="true">▧</span> Estadísticas</button>
+            </div>
+            <div class="auth-dropdown-divider" aria-hidden="true"></div>
+            <div class="auth-dropdown-section" role="group" aria-label="Configuración">
+              <button type="button" role="menuitem" data-action="settings"><span class="auth-dropdown-icon" aria-hidden="true">⚙</span> Configuración</button>
+            </div>
+            <div class="auth-dropdown-divider" aria-hidden="true"></div>
+            <button type="button" role="menuitem" data-action="logout" class="auth-dropdown-logout"><span class="auth-dropdown-icon" aria-hidden="true">↩</span> Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><i></i><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-energy" aria-hidden="true"><span class="energy-aura"></span><span class="energy-dot energy-dot--one"></span><span class="energy-dot energy-dot--two"></span><span class="energy-dot energy-dot--three"></span></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="kicker reveal reveal--hero"><span></span> MINECRAFT JAVA &amp; BEDROCK</p>
+          <h1 class="reveal reveal--hero reveal-delay-1">DRAGONS<br><em>SMP</em></h1>
+          <p class="hero-tagline reveal reveal--hero reveal-delay-2">La nueva generación del <strong>survival</strong> comienza aquí.</p>
+          <div class="hero-actions reveal reveal--hero reveal-delay-3">
+            <a class="button button--primary" href="#servidor">JUGAR AHORA <span>↗</span></a>
+            <a class="button button--outline" href="#discord">DISCORD <span>◈</span></a>
+          </div>
+          <div class="address-bar reveal reveal--hero reveal-delay-3">
+            <div class="address-value"><small>IP</small><strong>144.217.150.20</strong><b>:</b><small>PUERTO</small><strong>25593</strong></div>
+            <button class="copy-button" type="button" data-copy="144.217.150.20:25593" aria-label="Copiar IP y puerto"><span class="copy-glyph">⧉</span> COPIAR IP</button>
+          </div>
+        </div>
+        <div class="hero-logo reveal reveal--hero reveal-delay-2">
+          <div class="hero-particles" aria-hidden="true"></div>
+          <span class="hero-logo-glow" aria-hidden="true"></span>
+          <div class="hero-logo-art">
+            <img src="assets/logo.png" alt="DRAGONS SMP" class="official-logo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section server-section" id="servidor">
+      <div class="container server-content">
+        <div class="section-heading reveal"><div><p class="kicker"><span></span> EL PUNTO DE ENTRADA</p><h2>DESCUBRE <em>DRAGONS</em></h2></div></div>
+        <p class="section-lead reveal reveal-delay-1">Un survival de Minecraft Bedrock pensado para construir tu propia historia, a tu ritmo y junto a la comunidad.</p>
+        <div class="server-points">
+          <article class="server-point reveal"><span>01</span><div><h3>Un mundo abierto</h3><p>Empieza con lo esencial y decide hacia dónde crecer.</p></div></article>
+          <article class="server-point reveal reveal-delay-1"><span>02</span><div><h3>Progreso con propósito</h3><p>Cada recurso, construcción y decisión suma a tu aventura.</p></div></article>
+          <article class="server-point reveal reveal-delay-2"><span>03</span><div><h3>Una comunidad</h3><p>Comparte el camino y encuentra tu lugar en el reino.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section features-section" id="caracteristicas">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="kicker"><span></span> LA EXPERIENCIA</p><h2>SEIS FORMAS<br>DE <em>JUGAR.</em></h2></div><p>Una identidad clara.<br>Una aventura propia.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card reveal"><span>01</span><div class="feature-icon">▧</div><h3>Survival</h3><p>Comienza desde cero y deja que tus decisiones marquen el camino.</p></article>
+          <article class="feature-card reveal reveal-delay-1"><span>02</span><div class="feature-icon">◇</div><h3>Economía</h3><p>Intercambia recursos y convierte tu esfuerzo en progreso.</p></article>
+          <article class="feature-card reveal reveal-delay-2"><span>03</span><div class="feature-icon">✦</div><h3>Eventos</h3><p>Momentos especiales para romper la rutina del mundo.</p></article>
+          <article class="feature-card reveal"><span>04</span><div class="feature-icon">◎</div><h3>Comunidad</h3><p>Encuentra aliados, comparte proyectos y juega acompañado.</p></article>
+          <article class="feature-card reveal reveal-delay-1"><span>05</span><div class="feature-icon">⛏</div><h3>Minas</h3><p>Consigue recursos y mejora tu progreso dentro del servidor.</p></article>
+          <article class="feature-card feature-card--violet reveal reveal-delay-2"><span>06</span><div class="feature-icon">◈</div><h3>DRAGONS SMP</h3><p>¡Y más!</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section shop-section" id="tienda">
+      <div class="container shop-content">
+        <div class="section-heading shop-heading reveal"><div><p class="kicker"><span></span> DRAGONS STORE</p><h2>TIENDA</h2></div><p>Mejora tu experiencia<br>en DRAGONS SMP.</p></div>
+        <p class="shop-category shop-category--ranks reveal reveal-delay-1">RANGOS</p>
+        <div class="rank-grid shop-rank-grid">
+          <article class="rank-card reveal"><div class="rank-meta"><span>RANGO / 01</span><i>◌</i></div><h3>VIP</h3><p class="rank-price">$2.95 USD</p><p class="rank-category">Categoría: Bueno</p><ul class="rank-benefits"><li>Chat privado</li><li>Recompensas cada 7 días</li><li>Rango [VIP] en el servidor</li><li>Kits VIP</li><li>20M una sola vez</li><li>Eventos privados</li></ul></article>
+          <article class="rank-card rank-card--focus reveal reveal-delay-1"><span class="rank-badge">DESTACADO</span><div class="rank-meta"><span>RANGO / 02</span><i>✦</i></div><h3>DRAGON</h3><p class="rank-price">$17.68 USD</p><p class="rank-category">Categoría: El mejor</p><ul class="rank-benefits"><li>Chat privado</li><li>Recompensas cada 3 días</li><li>Rango [DRAGON] en el servidor</li><li>Kits DRAGON exclusivos</li><li>Eventos privados</li><li>50M cada 3 días</li><li>Parcela PRIVADA</li><li>Ventajas especiales en eventos</li><li>Contenido exclusivo (Spoilers)</li></ul></article>
+          <article class="rank-card reveal reveal-delay-2"><div class="rank-meta"><span>RANGO / 03</span><i>◌</i></div><h3>VIP+</h3><p class="rank-price">$5.89 USD</p><p class="rank-category">Categoría: Buenísimo</p><ul class="rank-benefits"><li>Chat privado</li><li>Recompensas cada 5 días</li><li>Rango [VIP+] en el servidor</li><li>Kits VIP+ exclusivos</li><li>Parcela PRIVADA</li><li>Eventos privados</li><li>30M cada 5 días</li></ul></article>
+        </div>
+        <div class="shop-divider" aria-hidden="true"></div>
+        <p class="shop-category reveal">UNBANS</p>
+        <div class="unban-grid">
+          <article class="unban-card unban-card--featured reveal reveal-delay-2" data-product="UNBAN"><span class="unban-badge">DESTACADO</span><div class="unban-label">PRODUCTO / 003</div><h3>UNBAN</h3><p>Retiro de sanción permanente.</p><div class="unban-price"><strong data-price-key="UNBAN_PRICE">$5.90 USD</strong></div><ul><li>Sin importar la sanción recibida, solicita tu Unban y vuelve a formar parte de DRAGONS SMP.</li><li>Soporte directo en Discord</li></ul>
+          </article>
+          <article class="unban-card reveal reveal-delay-3" data-product="SEGUNDO_UNBAN">
+            <div class="unban-label">PRODUCTO / 004</div><h3>SEGUNDO UNBAN</h3><p>Una segunda oportunidad para regresar a DRAGONS SMP.</p><div class="unban-price"><strong data-price-key="SEGUNDO_UNBAN_PRICE">$11.79 USD</strong></div><ul><li>Sin importar la sanción recibida, solicita tu Unban y vuelve a formar parte de DRAGONS SMP.</li><li>Soporte directo en Discord</li></ul>
+         </article>
+        </div>
+        <div class="purchase-contact reveal">
+          <div class="purchase-contact-glow" aria-hidden="true"></div>
+          <p class="kicker"><span></span> SOPORTE DE COMPRAS</p>
+          <h2>¿QUIERES <em>COMPRAR?</em></h2>
+          <p class="purchase-contact-copy">Para comprar un rango o producto de DRAGONS SMP, ponte en contacto con Alexito1774 a través de nuestro Discord. Nuestro equipo te indicará los métodos de pago disponibles y te ayudará durante todo el proceso.</p>
+          <a class="button button--primary purchase-contact-button" href="https://discord.com/users/1328856058566934602" target="_blank" rel="noopener noreferrer">💬 HABLAR CON ALEXITO <span>↗</span></a>
+          <p class="purchase-contact-note">Compra segura • Soporte personalizado • Atención directa</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section rules-section" id="reglas">
+      <div class="container rules-layout">
+        <div class="rules-content reveal reveal-delay-1"><p class="kicker"><span></span> CÓDIGO DE COMUNIDAD</p><h2>REGLAS<em>.</em></h2><p class="rules-description">Consulta las normas de DRAGONS SMP y mantén una buena convivencia con toda la comunidad.</p>
+          <div class="rule-list"><div class="rule-row"><span>01</span><div><strong>Respeto a la comunidad</strong><small>Respeta a todos los jugadores y al equipo de DRAGONS SMP. No se permiten insultos, acoso, amenazas ni comportamientos tóxicos.</small></div></div><div class="rule-row"><span>02</span><div><strong>Juego limpio</strong><small>No está permitido utilizar hacks, cheats, exploits o aprovechar errores del servidor para obtener ventajas injustas.</small></div></div><div class="rule-row"><span>03</span><div><strong>Sin spam ni publicidad</strong><small>Evita el spam, la publicidad de otros servidores y cualquier promoción no autorizada dentro de nuestra comunidad.</small></div></div></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="discord-section" id="discord">
+      <div class="container discord-layout">
+        <div class="discord-copy reveal"><p class="kicker"><span></span> CONECTA CON EL REINO</p><h2>COMUNIDAD <em>DRAGONS</em></h2><p>Únete a nuestra comunidad y forma parte de DRAGONS SMP.</p><a class="button button--primary" href="https://discord.gg/ggM39yaeQd" target="_blank" rel="noopener noreferrer">ENTRAR A DISCORD <span>↗</span></a></div>
+        <div class="discord-widget-wrap reveal reveal-delay-1"><div class="discord-widget-frame"><iframe src="https://discord.com/widget?id=1476978589575413813&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div></div>
+      </div>
+    </section>
+
+
+    <section class="section news-section" id="noticias">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="kicker"><span></span> ACTUALIZACIONES</p><h2>ÚLTIMAS <em>NOTICIAS.</em></h2></div><p>Lo que está por venir<br>en DRAGONS SMP.</p></div>
+        <!-- Sustituye estas tarjetas con noticias reales, fechas e imágenes. -->
+        <div class="news-grid">
+          <article class="news-card reveal"><div class="news-art news-art--one news-art--image"><button type="button" class="news-zoom" data-full="./assets/news/dragons-java-bedrock.png" tabindex="0" aria-label="Ver imagen ampliada de DRG / 001"><img class="news-art-img" src="./assets/news/dragons-java-bedrock.png" alt="DRAGONS JAVA Y BEDROCK SMP" onerror="this.style.display='none'"><span class="news-zoom-hint" aria-hidden="true"><span class="news-zoom-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.2" y1="16.2" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="news-zoom-text">¡Toca la imagen!</span></span></button><span>DRG / 001</span></div><div class="news-copy"><small>ACTUALIZACIÓN</small><h3>DRAGONS SMP ahora es Java <span class="news-title-amp">&amp;</span> Bedrock</h3><p>Ahora puedes disfrutar de DRAGONS SMP tanto en Minecraft Java como en Bedrock. Una misma comunidad, más formas de jugar.</p><a href="#discord">LEER NOTICIA <span>↗</span></a></div></article>
+          <article class="news-card reveal reveal-delay-1"><div class="news-art news-art--two news-art--image"><button type="button" class="news-zoom" data-full="./assets/news/Dragons-Modalidades-SSPM.png" tabindex="0" aria-label="Ver imagen ampliada de DRG / 002"><img class="news-art-img" src="./assets/news/Dragons-Modalidades-SSPM.png" alt="Nuevas modalidades en camino" onerror="this.style.display='none'"><span class="news-zoom-hint" aria-hidden="true"><span class="news-zoom-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.2" y1="16.2" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="news-zoom-text">¡Toca la imagen!</span></span></button><span>DRG / 002</span></div><div class="news-copy"><small>PRÓXIMAMENTE</small><h3>Nuevas modalidades en camino</h3><p>Estamos preparando nuevas experiencias para la comunidad, con modalidades como Survival, Semianárquico, Practice y Minijuegos.</p><a href="#discord">Leer noticia <span>↗</span></a></div></article>
+          <article class="news-card reveal reveal-delay-2"><div class="news-art news-art--three news-art--image news-art--fade"><button type="button" class="news-zoom" data-full="./assets/news/Dragons-Comunity-CESEPM.png" tabindex="0" aria-label="Ver imagen ampliada de DRG / 003"><img class="news-art-img" src="./assets/news/Dragons-Comunity-CESEPM.png" alt="Comunidad DRAGONS SMP" onerror="this.style.display='none'"><span class="news-zoom-hint" aria-hidden="true"><span class="news-zoom-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.2" y1="16.2" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="news-zoom-text">¡Toca la imagen!</span></span></button><span>DRG / 003</span></div><div class="news-copy"><small>PRÓXIMAMENTE</small><h3>El comienzo de nuestra comunidad</h3><p>DRAGONS SMP está preparando su comunidad para la apertura. Muy pronto podrás unirte, conocer nuevos jugadores y participar en eventos especiales.</p><a href="#discord">LEER NOTICIA <span>↗</span></a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section votes-section" id="opiniones">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="kicker"><span></span> TU OPINIÓN</p><h2>¿QUÉ TE PARECE <em>DRAGONS SMP?</em></h2></div><p>Tu opinión nos ayuda<br>a seguir mejorando.</p></div>
+        <div class="votes-grid reveal reveal-delay-1" role="group" aria-label="Opciones de votación">
+          <button type="button" class="vote-card" data-vote="Excelente"><span class="vote-emoji" aria-hidden="true">🔥</span><span class="vote-label">Excelente</span><span class="vote-bar" aria-hidden="true"><span class="vote-fill"></span></span><span class="vote-stats"><strong data-vote-count>0</strong> votos · <b data-vote-pct>0%</b></span></button>
+          <button type="button" class="vote-card" data-vote="Muy bueno"><span class="vote-emoji" aria-hidden="true">😍</span><span class="vote-label">Muy bueno</span><span class="vote-bar" aria-hidden="true"><span class="vote-fill"></span></span><span class="vote-stats"><strong data-vote-count>0</strong> votos · <b data-vote-pct>0%</b></span></button>
+          <button type="button" class="vote-card" data-vote="Bueno"><span class="vote-emoji" aria-hidden="true">👍</span><span class="vote-label">Bueno</span><span class="vote-bar" aria-hidden="true"><span class="vote-fill"></span></span><span class="vote-stats"><strong data-vote-count>0</strong> votos · <b data-vote-pct>0%</b></span></button>
+          <button type="button" class="vote-card" data-vote="Regular"><span class="vote-emoji" aria-hidden="true">😐</span><span class="vote-label">Regular</span><span class="vote-bar" aria-hidden="true"><span class="vote-fill"></span></span><span class="vote-stats"><strong data-vote-count>0</strong> votos · <b data-vote-pct>0%</b></span></button>
+        </div>
+        <p class="votes-total reveal reveal-delay-2"><span data-votes-total>0 votos en total</span></p>
+        <p class="votes-status" role="status" aria-live="polite" hidden></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-column footer-about"><a class="footer-brand" href="#inicio" aria-label="DRAGONS SMP, inicio"><img src="assets/logo.png" alt="DRAGONS SMP" class="brand-mark"></a><h2 class="footer-about-title">DRAGONS <em>SMP</em></h2><p>Somos una comunidad de Minecraft enfocada en crear una experiencia divertida, competitiva y amigable para todos. Únete a DRAGONS SMP y comienza tu aventura.</p></div>
+      <div class="footer-column footer-team"><h2 class="footer-title"><span></span>Equipo</h2><div class="team-list" aria-label="Equipo de DRAGONS SMP"><div class="team-group"><h3>Fundadores</h3><div class="team-group-list"><article class="team-member"><img src="assets/team/alexito1774.png" alt="Alexito1774" class="team-member-avatar"><div><strong class="team-member-name">Alexito1774</strong><span class="team-member-role">Fundador</span></div></article></div></div></div></div>
+      <div class="footer-column"><h2 class="footer-title"><span></span>Información</h2><nav class="footer-nav" aria-label="Enlaces de información"><a href="#reglas">Reglas del Servidor</a><a href="#servidor">Cómo jugar</a><a href="#discord">Soporte</a><a href="#servidor">Estado del Servidor</a><a href="#reglas">Términos y condiciones</a></nav></div>
+      <div class="footer-column footer-socials"><h2 class="footer-title"><span></span>Redes Sociales</h2><div class="social-links"><a class="social-link" href="https://discord.gg/ggM39yaeQd" target="_blank" rel="noopener noreferrer" aria-label="Unirse al Discord de DRAGONS SMP"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.54 4.22A16.2 16.2 0 0 0 15.5 3l-.5 1.02a14.2 14.2 0 0 0-3-.33c-1.02 0-2.02.11-3 .33L8.5 3a16.3 16.3 0 0 0-4.04 1.22C1.9 8.04 1.2 11.8 1.55 15.5a16.4 16.4 0 0 0 4.96 2.5l1.2-1.63c-.66-.24-1.29-.55-1.9-.9l.47-.36c3.66 1.72 7.63 1.72 11.25 0l.48.36c-.61.36-1.25.66-1.91.9l1.2 1.63a16.4 16.4 0 0 0 4.96-2.5c.41-4.3-.7-8.03-2.72-11.28ZM8.3 14.34c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2c1.13 0 2.02.99 2 2.2 0 1.21-.88 2.2-2 2.2Zm7.4 0c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2c1.13 0 2.02.99 2 2.2 0 1.21-.88 2.2-2 2.2Z"/></svg><span>Discord</span></a><a class="social-link" href="https://www.tiktok.com/@dragons.imperium" target="_blank" rel="noopener noreferrer" aria-label="Seguir a DRAGONS SMP en TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.7 3h2.8c.18 1.4.93 2.7 2.1 3.6.74.58 1.55.93 2.4 1.08v2.77a8.4 8.4 0 0 1-4.47-1.36v6.1a5.83 5.83 0 1 1-5.83-5.83c.34 0 .67.03 1 .09v2.84a3.06 3.06 0 1 0 2.1 2.9V3Z"/></svg><span>TikTok</span></a></div></div>
+      <div class="footer-column footer-personal"><h2 class="footer-title"><span></span>Alexito</h2><div class="personal-tiktok"><div class="personal-tiktok-top"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.7 3h2.8c.18 1.4.93 2.7 2.1 3.6.74.58 1.55.93 2.4 1.08v2.77a8.4 8.4 0 0 1-4.47-1.36v6.1a5.83 5.83 0 1 1-5.83-5.83c.34 0 .67.03 1 .09v2.84a3.06 3.06 0 1 0 2.1 2.9V3Z"/></svg><div class="personal-tiktok-text"><small>TikTok</small><strong>@alexitozzz_gg</strong></div></div><a class="personal-tiktok-cta" href="https://www.tiktok.com/@alexitozzz_gg" target="_blank" rel="noopener noreferrer">VER TIKTOK <span>↗</span></a></div></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 DRAGONS SMP. Todos los derechos reservados.</span><span>Powered by DRAGONS SMP</span></div>
+  </footer>
+
+  <div class="news-lightbox" id="news-lightbox" aria-hidden="true">
+    <div class="news-lightbox-backdrop" data-close-lightbox></div>
+    <figure class="news-lightbox-figure" role="dialog" aria-modal="true" aria-label="Imagen ampliada de noticia">
+      <button type="button" class="news-lightbox-close" data-close-lightbox aria-label="Cerrar imagen">×</button>
+      <img class="news-lightbox-img" src="" alt="">
+    </figure>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite">IP copiada al portapapeles</div>
+
+  <div class="profile-modal" id="profile-modal" aria-hidden="true">
+    <div class="profile-modal-backdrop" data-close-profile></div>
+    <div class="profile-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="profile-display-name" data-view="perfil">
+      <button class="profile-modal-close" type="button" data-close-profile aria-label="Cerrar">×</button>
+      <div class="profile-modal-head">
+        <img class="profile-avatar" id="profile-avatar" src="assets/avatar-placeholder.svg" alt="Avatar de Discord">
+        <div class="profile-identity">
+          <small>DRAGONS SMP · CUENTA VINCULADA</small>
+          <h2 id="profile-display-name">Invitado</h2>
+          <p id="profile-username">@invitado</p>
+        </div>
+      </div>
+      <div class="profile-tabs" role="tablist" aria-label="Secciones de la cuenta">
+        <button type="button" role="tab" class="profile-tab is-active" data-profile-tab="perfil" aria-selected="true">Mi perfil</button>
+        <button type="button" role="tab" class="profile-tab" data-profile-tab="cuenta" aria-selected="false">Mi cuenta</button>
+      </div>
+      <div class="profile-pane" data-profile-pane="perfil">
+        <div class="profile-field">
+          <span>ID de Discord</span>
+          <div class="profile-id-row">
+            <strong id="profile-discord-id">—</strong>
+            <button type="button" class="profile-copy-id" data-copy-discord-id>Copiar</button>
+          </div>
+        </div>
+        <div class="profile-grid">
+          <div class="profile-field profile-field--soon">
+            <span>Rango / VIP</span>
+            <strong>Sin rango</strong>
+            <small>Próximamente: se mostrará tu rango de la tienda.</small>
+          </div>
+          <div class="profile-field profile-field--soon">
+            <span>Compras de la tienda</span>
+            <strong>0 compras</strong>
+            <small>Próximamente: historial de compras.</small>
+          </div>
+          <div class="profile-field profile-field--soon">
+            <span>Estadísticas</span>
+            <strong>—</strong>
+            <small>Próximamente: progreso y stats del servidor.</small>
+          </div>
+        </div>
+      </div>
+      <div class="profile-pane" data-profile-pane="cuenta" hidden>
+        <div class="profile-field">
+          <span>Sesión</span>
+          <strong>Sesión activa con Discord</strong>
+          <small>Gestionada de forma segura por Supabase Auth. No guardamos contraseñas.</small>
+        </div>
+        <div class="profile-field">
+          <span>ID de Discord</span>
+          <div class="profile-id-row">
+            <strong id="profile-discord-id-duplicate">—</strong>
+          </div>
+          <small>Tu identificador único de Discord.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-modal" id="settings-modal" aria-hidden="true">
+    <div class="profile-modal-backdrop" data-close-settings></div>
+    <div class="settings-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <button class="profile-modal-close" type="button" data-close-settings aria-label="Cerrar">×</button>
+      <div class="profile-modal-head">
+        <div class="profile-identity">
+          <small>DRAGONS SMP · PREFERENCIAS LOCALES</small>
+          <h2 id="settings-title">CONFIGURACIÓN</h2>
+          <p>Tus preferencias se guardan solo en este dispositivo.</p>
+        </div>
+      </div>
+      <div class="settings-grid">
+        <section class="settings-section" aria-label="Apariencia">
+          <h3>Apariencia</h3>
+          <div class="setting-row"><div class="setting-text"><strong>Animaciones</strong><small>Controla las animaciones de la página.</small></div><button type="button" class="switch" role="switch" aria-checked="true" data-setting="animations" aria-label="Animaciones"><span></span></button></div>
+          <div class="setting-row"><div class="setting-text"><strong>Efectos visuales</strong><small>Controla partículas, glows y efectos del fondo.</small></div><button type="button" class="switch" role="switch" aria-checked="true" data-setting="visualEffects" aria-label="Efectos visuales"><span></span></button></div>
+          <div class="setting-row"><div class="setting-text"><strong>Partículas</strong><small>Mostrar partículas ambientales del fondo.</small></div><button type="button" class="switch" role="switch" aria-checked="true" data-setting="particles" aria-label="Partículas"><span></span></button></div>
+          <div class="setting-row"><div class="setting-text"><strong>Parallax</strong><small>Permite que algunos elementos respondan al movimiento del cursor.</small></div><button type="button" class="switch" role="switch" aria-checked="true" data-setting="parallax" aria-label="Parallax"><span></span></button></div>
+        </section>
+        <section class="settings-section" aria-label="Accesibilidad">
+          <h3>Accesibilidad</h3>
+          <div class="setting-row"><div class="setting-text"><strong>Reducir movimiento</strong><small>Reduce transiciones y detiene animaciones decorativas.</small></div><button type="button" class="switch" role="switch" aria-checked="false" data-setting="reducedMotion" aria-label="Reducir movimiento"><span></span></button></div>
+          <div class="setting-row"><div class="setting-text"><strong>Alto contraste</strong><small>Aumenta contraste de textos y bordes.</small></div><button type="button" class="switch" role="switch" aria-checked="false" data-setting="highContrast" aria-label="Alto contraste"><span></span></button></div>
+        </section>
+        <section class="settings-section" aria-label="Notificaciones">
+          <h3>Notificaciones</h3>
+          <div class="setting-row"><div class="setting-text"><strong>Notificaciones de la web</strong><small>Avisos visuales de la interfaz.</small></div><button type="button" class="switch" role="switch" aria-checked="true" data-setting="webNotifications" aria-label="Notificaciones de la web"><span></span></button></div>
+          <div class="setting-row"><div class="setting-text"><strong>Avisos de la cuenta</strong><small>Preferencia local para futuros avisos de cuenta.</small></div><button type="button" class="switch" role="switch" aria-checked="true" data-setting="accountNotifications" aria-label="Avisos de la cuenta"><span></span></button></div>
+        </section>
+        <section class="settings-section" aria-label="Privacidad">
+          <h3>Privacidad</h3>
+          <div class="setting-row"><div class="setting-text"><strong>Recordar preferencias</strong><small>Guardar tus preferencias de la web en este dispositivo.</small></div><button type="button" class="switch" role="switch" aria-checked="true" data-setting="rememberPreferences" aria-label="Recordar preferencias"><span></span></button></div>
+          <div class="setting-row"><div class="setting-text"><strong>Datos locales</strong><small>Solo borra preferencias. No cierra tu sesión de Discord.</small></div><button type="button" class="profile-link-btn settings-wipe-btn" id="settings-wipe-btn">Eliminar datos locales</button></div>
+          <div class="settings-confirm" id="settings-confirm" hidden>
+            <p>¿Seguro que quieres eliminar las preferencias guardadas en este dispositivo?</p>
+            <div class="settings-confirm-actions"><button type="button" class="profile-link-btn" id="settings-wipe-cancel">Cancelar</button><button type="button" class="profile-link-btn profile-link-btn--danger" id="settings-wipe-confirm">Eliminar</button></div>
+          </div>
+        </section>
+        <section class="settings-section" aria-label="Cuenta">
+          <h3>Cuenta</h3>
+          <div class="settings-account">
+            <div><span>Discord</span><strong>🟢 <span id="settings-discord-state">Desconectado</span></strong></div>
+            <div><span>Usuario</span><strong id="settings-discord-user">—</strong></div>
+            <div><span>ID de Discord</span><strong id="settings-discord-id">—</strong></div>
+            <div><span>Minecraft</span><strong id="settings-minecraft">⚪ No vinculada</strong></div>
+            <div><span>Rango</span><strong>Sin rango</strong></div>
+          </div>
+        </section>
+      </div>
+      <div class="settings-actions">
+        <button type="button" class="profile-link-btn" id="settings-reset-btn">Restaurar configuración</button>
+        <button type="button" class="profile-link-btn" data-close-settings>Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script src="effects.js"></script>
+  <script src="particles.js"></script>
+  <script src="settings.js"></script>
+  <script src="community-votes.js"></script>
+</body>
+</html>
